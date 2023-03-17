@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+	html {
+		overflow-x: hidden;
+	}
+
+	html.scroll-hidden {
+		overflow-y: hidden;
+	}
+
 	body {
 		font-family: 'Poppins', sans-serif;
+		position: relative;
 	}
 }
