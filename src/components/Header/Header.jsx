@@ -1,13 +1,17 @@
+import { useLayoutEffect, useRef } from 'react'
 import Burger from '@/ui/Burger/Burger'
 import Button from '@/ui/Button'
 import Logo from '../Logo'
 import Nav from './Nav'
 
+import useWindowSize from '../hooks/useWindowSize'
+
 import '@/ui/Burger/Burger.scss'
-import { useLayoutEffect, useRef } from 'react'
 
 const Header = ({ isMobMenuActive, setIsMobMenuActive, setMarginTop }) => {
 	const ref = useRef()
+
+	const windowSize = useWindowSize()
 
 	useLayoutEffect(() => {
 		setMarginTop(ref.current.offsetHeight)
@@ -35,10 +39,12 @@ const Header = ({ isMobMenuActive, setIsMobMenuActive, setMarginTop }) => {
 						isSolid={true}
 					/>
 
-					<Burger
-						isMobMenuActive={isMobMenuActive}
-						setIsMobMenuActive={setIsMobMenuActive}
-					/>
+					{windowSize.width <= 640 ? (
+						<Burger
+							isMobMenuActive={isMobMenuActive}
+							setIsMobMenuActive={setIsMobMenuActive}
+						/>
+					) : null}
 				</div>
 			</header>
 
