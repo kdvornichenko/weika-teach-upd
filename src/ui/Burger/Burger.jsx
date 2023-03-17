@@ -1,4 +1,9 @@
 const Burger = ({ isMobMenuActive, setIsMobMenuActive }) => {
+	const onBurgerClick = () => {
+		setIsMobMenuActive(!isMobMenuActive)
+		document.documentElement.classList.toggle('scroll-hidden')
+	}
+
 	return (
 		<div
 			className={
@@ -16,10 +21,7 @@ const Burger = ({ isMobMenuActive, setIsMobMenuActive }) => {
 					d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"
 				></path>
 			</svg>
-			<button
-				className="menu-icon-trigger"
-				onClick={() => setIsMobMenuActive(!isMobMenuActive)}
-			></button>
+			<button className="menu-icon-trigger" onClick={onBurgerClick}></button>
 		</div>
 	)
 }
