@@ -22,7 +22,7 @@ const Header = ({ isMobMenuActive, setIsMobMenuActive, setMarginTop }) => {
 			<header
 				ref={ref}
 				className={
-					(isMobMenuActive ? '' : 'backdrop-blur-xl') +
+					(isMobMenuActive ? '' : 'bg-white shadow') +
 					' fixed top-0 z-[70] w-full py-3'
 				}
 			>

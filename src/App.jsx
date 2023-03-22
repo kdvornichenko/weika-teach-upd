@@ -1,7 +1,8 @@
-import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer'
-import Main from '@/components/Main/Main'
 import { useState } from 'react'
+import Header from '@/components/Header/Header'
+import Main from '@/components/Main/Main'
+import Skills from '@/components/Skills/Skills'
+import Footer from '@/components/Footer'
 
 function App() {
 	const [isMobMenuActive, setIsMobMenuActive] = useState(false)
@@ -20,7 +21,8 @@ function App() {
 				className=" mx-auto max-w-7xl px-4 "
 			>
 				<Main />
-				<Footer />
+				<Skills />
+				{/* <Footer /> */}
 			</div>
 		</>
 	)

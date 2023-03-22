@@ -5,6 +5,11 @@
 @layer base {
 	html {
 		overflow-x: hidden;
+		scroll-behavior: smooth;
+	}
+
+	section {
+		scroll-margin-top: 100px;
 	}
 
 	html.scroll-hidden {
@@ -14,5 +19,13 @@
 	body {
 		font-family: 'Poppins', sans-serif;
 		position: relative;
+	}
+
+	h2 {
+		@apply text-center text-5xl font-semibold;
+	}
+
+	h3 {
+		@apply text-3xl font-semibold;
 	}
 }

@@ -4,7 +4,10 @@ import Girl from './Girl'
 
 const Main = () => {
 	return (
-		<section className="flex flex-col-reverse items-center sm:mt-5 sm:flex-row sm:gap-5 md:mt-14 lg:mt-16 xl:mt-14">
+		<section
+			id="home"
+			className="flex flex-col-reverse items-center sm:mt-5 sm:flex-row sm:gap-5 md:mt-14 lg:mt-16 xl:mt-14"
+		>
 			<div className="w-96 text-center sm:w-1/2 sm:text-left">
 				<div className="flex flex-col-reverse items-center sm:flex-row sm:gap-10">
 					<h1 className="text-2xl font-semibold sm:text-4xl lg:text-5xl xl:text-6xl xl:leading-tight">
